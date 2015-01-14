@@ -63,10 +63,6 @@ class UsersController < ApplicationController
   end
 
   private
-    # Check for authenticated user.
-    def not_authenticated
-      redirect_to login_path, alert: "Please login first"
-    end
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
